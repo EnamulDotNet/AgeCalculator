@@ -7,3 +7,6 @@ C:\Users\APON\Documents\Visual Studio 2013\AgeCalculator\AgeCalculator\obj\Debug
 C:\Users\APON\Documents\Visual Studio 2013\AgeCalculator\AgeCalculator\obj\Debug\AgeCalculator.csproj.GenerateResource.Cache
 C:\Users\APON\Documents\Visual Studio 2013\AgeCalculator\AgeCalculator\obj\Debug\AgeCalculator.exe
 C:\Users\APON\Documents\Visual Studio 2013\AgeCalculator\AgeCalculator\obj\Debug\AgeCalculator.pdb
+C:\Users\APON\Desktop\New folder (4)\AgeCalculator\bin\Debug\AgeCalculator.exe.config
+C:\Users\APON\Desktop\New folder (4)\AgeCalculator\obj\Debug\AgeCalculator.exe
+C:\Users\APON\Desktop\New folder (4)\AgeCalculator\obj\Debug\AgeCalculator.pdb
