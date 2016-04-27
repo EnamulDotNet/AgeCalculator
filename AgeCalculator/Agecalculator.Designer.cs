@@ -41,6 +41,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.dayTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
+            this.errLabel = new System.Windows.Forms.Label();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -90,6 +92,7 @@
             this.ageOnDateTextbox.Size = new System.Drawing.Size(170, 26);
             this.ageOnDateTextbox.TabIndex = 2;
             this.ageOnDateTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ageOnDateTextbox.TextChanged += new System.EventHandler(this.ageOnDateTextbox_TextChanged);
             // 
             // calculateButton
             // 
@@ -100,6 +103,7 @@
             this.calculateButton.TabIndex = 3;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
+            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // label4
             // 
@@ -114,10 +118,10 @@
             // yearTextBox
             // 
             this.yearTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearTextBox.Location = new System.Drawing.Point(158, 200);
+            this.yearTextBox.Location = new System.Drawing.Point(63, 164);
             this.yearTextBox.Name = "yearTextBox";
             this.yearTextBox.ReadOnly = true;
-            this.yearTextBox.Size = new System.Drawing.Size(53, 26);
+            this.yearTextBox.Size = new System.Drawing.Size(192, 26);
             this.yearTextBox.TabIndex = 5;
             this.yearTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -171,11 +175,34 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "Days";
             // 
+            // errLabel
+            // 
+            this.errLabel.AutoSize = true;
+            this.errLabel.ForeColor = System.Drawing.Color.Red;
+            this.errLabel.Location = new System.Drawing.Point(216, 77);
+            this.errLabel.Name = "errLabel";
+            this.errLabel.Size = new System.Drawing.Size(0, 13);
+            this.errLabel.TabIndex = 7;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
+            this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(281, 120);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
+            this.dateTimePicker1.TabIndex = 8;
+            this.dateTimePicker1.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            // 
             // AgeCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 298);
+            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.errLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -211,6 +238,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox dayTextBox;
         private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label errLabel;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
 
