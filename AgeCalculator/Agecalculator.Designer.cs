@@ -30,8 +30,6 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.dateOfBirthTextbox = new System.Windows.Forms.TextBox();
-            this.ageOnDateTextbox = new System.Windows.Forms.TextBox();
             this.calculateButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.yearTextBox = new System.Windows.Forms.TextBox();
@@ -43,6 +41,7 @@
             this.errLabel = new System.Windows.Forms.Label();
             this.dOBdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.cDdateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -65,41 +64,24 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Age on This Date:";
             // 
-            // dateOfBirthTextbox
-            // 
-            this.dateOfBirthTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfBirthTextbox.Location = new System.Drawing.Point(99, 260);
-            this.dateOfBirthTextbox.Name = "dateOfBirthTextbox";
-            this.dateOfBirthTextbox.Size = new System.Drawing.Size(170, 26);
-            this.dateOfBirthTextbox.TabIndex = 1;
-            this.dateOfBirthTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // ageOnDateTextbox
-            // 
-            this.ageOnDateTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageOnDateTextbox.Location = new System.Drawing.Point(327, 250);
-            this.ageOnDateTextbox.Name = "ageOnDateTextbox";
-            this.ageOnDateTextbox.Size = new System.Drawing.Size(170, 26);
-            this.ageOnDateTextbox.TabIndex = 2;
-            this.ageOnDateTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-
-            // 
             // calculateButton
             // 
+            this.calculateButton.BackColor = System.Drawing.Color.Tomato;
             this.calculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.calculateButton.ForeColor = System.Drawing.Color.White;
             this.calculateButton.Location = new System.Drawing.Point(214, 125);
             this.calculateButton.Name = "calculateButton";
             this.calculateButton.Size = new System.Drawing.Size(161, 45);
             this.calculateButton.TabIndex = 3;
             this.calculateButton.Text = "Calculate";
-            this.calculateButton.UseVisualStyleBackColor = true;
+            this.calculateButton.UseVisualStyleBackColor = false;
             this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(103, 202);
+            this.label4.Location = new System.Drawing.Point(96, 202);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 4;
@@ -107,8 +89,9 @@
             // 
             // yearTextBox
             // 
+            this.yearTextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.yearTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearTextBox.Location = new System.Drawing.Point(149, 201);
+            this.yearTextBox.Location = new System.Drawing.Point(142, 201);
             this.yearTextBox.Name = "yearTextBox";
             this.yearTextBox.ReadOnly = true;
             this.yearTextBox.Size = new System.Drawing.Size(62, 26);
@@ -119,7 +102,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(211, 205);
+            this.label5.Location = new System.Drawing.Point(205, 205);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 16);
             this.label5.TabIndex = 6;
@@ -127,8 +110,9 @@
             // 
             // monthTextBox
             // 
+            this.monthTextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.monthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthTextBox.Location = new System.Drawing.Point(261, 200);
+            this.monthTextBox.Location = new System.Drawing.Point(254, 200);
             this.monthTextBox.Name = "monthTextBox";
             this.monthTextBox.ReadOnly = true;
             this.monthTextBox.Size = new System.Drawing.Size(62, 26);
@@ -139,7 +123,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(324, 206);
+            this.label6.Location = new System.Drawing.Point(318, 206);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 16);
             this.label6.TabIndex = 6;
@@ -147,8 +131,9 @@
             // 
             // dayTextBox
             // 
+            this.dayTextBox.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dayTextBox.Location = new System.Drawing.Point(381, 200);
+            this.dayTextBox.Location = new System.Drawing.Point(374, 200);
             this.dayTextBox.Name = "dayTextBox";
             this.dayTextBox.ReadOnly = true;
             this.dayTextBox.Size = new System.Drawing.Size(61, 26);
@@ -159,7 +144,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(444, 205);
+            this.label7.Location = new System.Drawing.Point(438, 205);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 16);
             this.label7.TabIndex = 6;
@@ -198,11 +183,22 @@
             this.cDdateTimePicker.TabIndex = 8;
             this.cDdateTimePicker.Value = new System.DateTime(2016, 4, 27, 0, 0, 0, 0);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(414, 276);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 13);
+            this.label3.TabIndex = 9;
+            this.label3.Text = "Created by: Enamul Haque";
+            // 
             // AgeCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumAquamarine;
             this.ClientSize = new System.Drawing.Size(560, 298);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.cDdateTimePicker);
             this.Controls.Add(this.dOBdateTimePicker);
             this.Controls.Add(this.errLabel);
@@ -214,8 +210,6 @@
             this.Controls.Add(this.yearTextBox);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.calculateButton);
-            this.Controls.Add(this.ageOnDateTextbox);
-            this.Controls.Add(this.dateOfBirthTextbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "AgeCalculator";
@@ -229,8 +223,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox dateOfBirthTextbox;
-        private System.Windows.Forms.TextBox ageOnDateTextbox;
         private System.Windows.Forms.Button calculateButton;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox yearTextBox;
@@ -242,6 +234,7 @@
         private System.Windows.Forms.Label errLabel;
         private System.Windows.Forms.DateTimePicker dOBdateTimePicker;
         private System.Windows.Forms.DateTimePicker cDdateTimePicker;
+        private System.Windows.Forms.Label label3;
     }
 }
 
