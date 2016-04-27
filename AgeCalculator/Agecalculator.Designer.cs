@@ -31,7 +31,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dateOfBirthTextbox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.ageOnDateTextbox = new System.Windows.Forms.TextBox();
             this.calculateButton = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
@@ -42,7 +41,8 @@
             this.dayTextBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.errLabel = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dOBdateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.cDdateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -68,38 +68,28 @@
             // dateOfBirthTextbox
             // 
             this.dateOfBirthTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateOfBirthTextbox.Location = new System.Drawing.Point(216, 48);
+            this.dateOfBirthTextbox.Location = new System.Drawing.Point(99, 260);
             this.dateOfBirthTextbox.Name = "dateOfBirthTextbox";
             this.dateOfBirthTextbox.Size = new System.Drawing.Size(170, 26);
             this.dateOfBirthTextbox.TabIndex = 1;
             this.dateOfBirthTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(391, 53);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 15);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "(DD-MM-YYYY)";
-            // 
             // ageOnDateTextbox
             // 
             this.ageOnDateTextbox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ageOnDateTextbox.Location = new System.Drawing.Point(216, 92);
+            this.ageOnDateTextbox.Location = new System.Drawing.Point(327, 250);
             this.ageOnDateTextbox.Name = "ageOnDateTextbox";
             this.ageOnDateTextbox.Size = new System.Drawing.Size(170, 26);
             this.ageOnDateTextbox.TabIndex = 2;
             this.ageOnDateTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ageOnDateTextbox.TextChanged += new System.EventHandler(this.ageOnDateTextbox_TextChanged);
+
             // 
             // calculateButton
             // 
             this.calculateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calculateButton.Location = new System.Drawing.Point(284, 135);
+            this.calculateButton.Location = new System.Drawing.Point(214, 125);
             this.calculateButton.Name = "calculateButton";
-            this.calculateButton.Size = new System.Drawing.Size(102, 28);
+            this.calculateButton.Size = new System.Drawing.Size(161, 45);
             this.calculateButton.TabIndex = 3;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
@@ -118,10 +108,10 @@
             // yearTextBox
             // 
             this.yearTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.yearTextBox.Location = new System.Drawing.Point(63, 164);
+            this.yearTextBox.Location = new System.Drawing.Point(149, 201);
             this.yearTextBox.Name = "yearTextBox";
             this.yearTextBox.ReadOnly = true;
-            this.yearTextBox.Size = new System.Drawing.Size(192, 26);
+            this.yearTextBox.Size = new System.Drawing.Size(62, 26);
             this.yearTextBox.TabIndex = 5;
             this.yearTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -138,10 +128,10 @@
             // monthTextBox
             // 
             this.monthTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthTextBox.Location = new System.Drawing.Point(273, 200);
+            this.monthTextBox.Location = new System.Drawing.Point(261, 200);
             this.monthTextBox.Name = "monthTextBox";
             this.monthTextBox.ReadOnly = true;
-            this.monthTextBox.Size = new System.Drawing.Size(50, 26);
+            this.monthTextBox.Size = new System.Drawing.Size(62, 26);
             this.monthTextBox.TabIndex = 5;
             this.monthTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -158,10 +148,10 @@
             // dayTextBox
             // 
             this.dayTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dayTextBox.Location = new System.Drawing.Point(383, 200);
+            this.dayTextBox.Location = new System.Drawing.Point(381, 200);
             this.dayTextBox.Name = "dayTextBox";
             this.dayTextBox.ReadOnly = true;
-            this.dayTextBox.Size = new System.Drawing.Size(50, 26);
+            this.dayTextBox.Size = new System.Drawing.Size(61, 26);
             this.dayTextBox.TabIndex = 5;
             this.dayTextBox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -169,7 +159,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(437, 206);
+            this.label7.Location = new System.Drawing.Point(444, 205);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(40, 16);
             this.label7.TabIndex = 6;
@@ -184,24 +174,37 @@
             this.errLabel.Size = new System.Drawing.Size(0, 13);
             this.errLabel.TabIndex = 7;
             // 
-            // dateTimePicker1
+            // dOBdateTimePicker
             // 
-            this.dateTimePicker1.CustomFormat = "dd-MM-yyyy";
-            this.dateTimePicker1.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(281, 120);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker1.TabIndex = 8;
-            this.dateTimePicker1.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            this.dOBdateTimePicker.CustomFormat = "dd-MM-yyyy";
+            this.dOBdateTimePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.dOBdateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dOBdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dOBdateTimePicker.Location = new System.Drawing.Point(214, 49);
+            this.dOBdateTimePicker.Name = "dOBdateTimePicker";
+            this.dOBdateTimePicker.Size = new System.Drawing.Size(161, 26);
+            this.dOBdateTimePicker.TabIndex = 8;
+            this.dOBdateTimePicker.Value = new System.DateTime(1990, 1, 1, 0, 0, 0, 0);
+            // 
+            // cDdateTimePicker
+            // 
+            this.cDdateTimePicker.CustomFormat = "dd-MM-yyyy";
+            this.cDdateTimePicker.DropDownAlign = System.Windows.Forms.LeftRightAlignment.Right;
+            this.cDdateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cDdateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.cDdateTimePicker.Location = new System.Drawing.Point(214, 93);
+            this.cDdateTimePicker.Name = "cDdateTimePicker";
+            this.cDdateTimePicker.Size = new System.Drawing.Size(161, 26);
+            this.cDdateTimePicker.TabIndex = 8;
+            this.cDdateTimePicker.Value = new System.DateTime(2016, 4, 27, 0, 0, 0, 0);
             // 
             // AgeCalculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(560, 298);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.cDdateTimePicker);
+            this.Controls.Add(this.dOBdateTimePicker);
             this.Controls.Add(this.errLabel);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -212,7 +215,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.ageOnDateTextbox);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.dateOfBirthTextbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -228,7 +230,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox dateOfBirthTextbox;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox ageOnDateTextbox;
         private System.Windows.Forms.Button calculateButton;
         private System.Windows.Forms.Label label4;
@@ -239,7 +240,8 @@
         private System.Windows.Forms.TextBox dayTextBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label errLabel;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dOBdateTimePicker;
+        private System.Windows.Forms.DateTimePicker cDdateTimePicker;
     }
 }
 

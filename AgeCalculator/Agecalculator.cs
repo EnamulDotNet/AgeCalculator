@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace AgeCalculator
@@ -15,30 +8,21 @@ namespace AgeCalculator
         public AgeCalculator()
         {
             InitializeComponent();
-            DateTime tDate = DateTime.Now;
-            string toDay = tDate.ToString("dd-MM-yyyy");
-            ageOnDateTextbox.Text = toDay;
-        }
-
-        private void ageOnDateTextbox_TextChanged(object sender, EventArgs e)
-        {
-
+            cDdateTimePicker.Value = DateTime.Now;
         }
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
-            try
-            {
-                DateTime dateOfBirth = Convert.ToDateTime(dateOfBirthTextbox.Text);
-                DateTime ageOnDate = Convert.ToDateTime(ageOnDateTextbox.Text);
-                int bd = dateOfBirth.Day;
-                int bm = dateOfBirth.Month;
-                int by = dateOfBirth.Year;
-                int cd = ageOnDate.Day;
-                int cm = ageOnDate.Month;
-                int cy = ageOnDate.Year;
-                int dd, mm, yy;
-                if (bd <= cd)
+           
+      
+                int bd = dOBdateTimePicker.Value.Day;
+                int bm = dOBdateTimePicker.Value.Month;
+                int by = dOBdateTimePicker.Value.Year;
+                int cd = cDdateTimePicker.Value.Day;
+                int cm = cDdateTimePicker.Value.Month;
+                int cy = cDdateTimePicker.Value.Year;
+                int dd, mm;
+            if (bd <= cd)
                 {
                     dd = cd - bd;
                 }
@@ -49,7 +33,7 @@ namespace AgeCalculator
                 }
                 if (bm <= cm)
                 {
-                    mm = cd - bd;
+                    mm = cm - bm;
                 }
                 else
                 {
@@ -57,18 +41,29 @@ namespace AgeCalculator
                     by += 1;
                 }
 
-                yy = cy - by;
-
-                yearTextBox.Text = yy.ToString();
-                monthTextBox.Text = mm.ToString();
-                dayTextBox.Text = dd.ToString();
-                errLabel.Text = "";
-            }
-            catch (Exception)
-            {
-
-               errLabel.Text="Invalid input";
-            }
+                if (by <= cy)
+                {
+                    int yy = cy - by;
+                    if (dd==30)
+                    {
+                        dd = 0;
+                        mm += 1;
+                        if (mm==12)
+                        {
+                            mm = 0;
+                            yy += 1;
+                        }
+                    }
+                    yearTextBox.Text = yy.ToString();
+                    monthTextBox.Text = mm.ToString();
+                    dayTextBox.Text = dd.ToString();
+                    errLabel.Text = "";
+                }
+                else
+                {
+                    errLabel.Text = "Age on date can't be earlier than DOB";
+                }
+                
             
         }
     }
